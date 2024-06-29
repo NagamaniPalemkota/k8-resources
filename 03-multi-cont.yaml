@@ -8,7 +8,7 @@ spec:
     image: nginx
   
   - name: alma-linux
-    image: "alma-linux:9"
+    image: "almalinux:9"
     command: ["sleep","2000" ]
 
 
