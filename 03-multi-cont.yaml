@@ -9,6 +9,6 @@ spec:
   
   - name: alma-linux
     image: "alma-linux:9"
-    command: "sleep 2000"
+    command: ["sleep","2000" ]
 
 
