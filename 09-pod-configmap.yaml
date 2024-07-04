@@ -6,14 +6,18 @@ spec:
   containers:
    - name: nginx
      image: nginx
-     env:
-     - name: course-details
-       valueFrom: 
-        configMapKeyRef:   #mentioning that values are referred from configmap
-          name: expense
-          key: course
-     - name: duration-details
-       valueFrom:
-        configMapKeyRef:
-          name: expense
-          key: Duration 
+     envFrom:
+     - configMapRef:
+        name: expense  #it refers the complete configmap file expense
+
+    #  env:
+    #  - name: course-details
+    #    valueFrom: 
+    #     configMapKeyRef:   #mentioning that values are referred from configmap
+    #       name: expense
+    #       key: course
+    #  - name: duration-details
+    #    valueFrom:
+    #     configMapKeyRef:
+    #       name: expense
+    #       key: Duration 
