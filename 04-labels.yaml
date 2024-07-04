@@ -7,6 +7,6 @@ metadata:
     Learner: Mani
     Trainer: Shiva
 spec:
-  Containers:
+  containers:
   - name: nginx
     image: nginx
