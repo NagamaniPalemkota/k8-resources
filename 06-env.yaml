@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: env
+  namespace: expense
+  labels:
+   name: env-labels
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+    - name: Course
+      value: 'Kubernetes'
+    - name: Learner
+      value: 'Mani'
