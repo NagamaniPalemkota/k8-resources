@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: annotations
+  annotations:  
+    kubernetes.io/created-by: 'Mani'
+    jenkins-build-url: 'https://jenkins.muvva.online'
+spec:
+ containers:
+ - name: nginx
+   image: nginx 
