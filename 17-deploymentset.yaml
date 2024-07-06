@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginxDeployment
+  name: nginxdeployment
   labels:
     app: nginx
     component: frontend
