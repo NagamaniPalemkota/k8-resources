@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginxDeployment
+  labels:
+    app: nginx
+    component: frontend
+  #these labels belong to deployment set resource
+spec:
+  replicas: 3 #specify no. of pods, as per our requirement
+  selector: #select the pods with these labels
+    matchLabels:
+      component: frontend
+      app: nginx
+    #below mentioned code refers to pod definition
+  template:
+    metadata:
+      labels:
+        component: frontend
+        app: nginx
+        project: expense
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable-perl
