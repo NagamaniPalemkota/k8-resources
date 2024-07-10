@@ -1,3 +1,4 @@
+#creating pv for the corresponding EFS of our project
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -13,3 +14,16 @@ spec:
   csi:
     driver: efs.csi.aws.com
     volumeHandle: "fs-0f227f791178c5ebf"  #volume id of our EFS
+---
+# creating pvc for the above pv
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-static-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeName: "efs-pv"
+  resources:
+    requests:
+      storage: 2Gi
