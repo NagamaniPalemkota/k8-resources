@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: efs-pod
+  name: efs-pod2
   labels:
     project: web
     component: nginx
