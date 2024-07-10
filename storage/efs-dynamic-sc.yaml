@@ -3,7 +3,6 @@ apiVersion: storage.k8s.io/v1
 metadata:
   name: efs-dynamic-sc
 provisioner: efs.csi.aws.com
-reclaimPolicy: Retain # default value is Delete
 parameters:
   provisioningMode: efs-ap
   fileSystemId: fs-0f11005d3cc24dfca  #EFS volume id should be given
