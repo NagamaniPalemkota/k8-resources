@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: Always
+  tolerations:                  #tolerations should match with the taint specs of node
+  - key: "project"
+    operator: "Equal"
+    value: "expense"
+    effect: "NoSchedule"
