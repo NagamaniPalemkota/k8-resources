@@ -45,4 +45,4 @@ spec:
       name: filebeat
       items:
         - key: filebeat.yml
-          value: filebeat.yml
+          path: filebeat.yml
