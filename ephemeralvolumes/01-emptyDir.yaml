@@ -33,7 +33,8 @@ spec:
   - name: filebeat
     image: docker.elastic.co/beats/filebeat:7.5.0
     volumeMounts:
-    - mountPath: /usr/share/filebeat/filebeat.yml
+    - name: filebeat-config 
+      mountPath: /usr/share/filebeat/filebeat.yml
       subPath: filebeat.yml
     - name: nginx-logs
       mountPath: /var/log/nginx/
